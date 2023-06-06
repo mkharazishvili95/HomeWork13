@@ -1,0 +1,32 @@
+﻿@model Appointment
+
+<h2>Book Appointment</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(model => model.FirstName)
+        @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.FirstName)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.LastName)
+        @Html.TextBoxFor(model => model.LastName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.LastName)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Doctor)
+        @Html.TextBoxFor(model => model.Doctor, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Doctor)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Time)
+        @Html.TextBoxFor(model => model.Time, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Time)
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+}
